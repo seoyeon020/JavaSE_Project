@@ -11,10 +11,9 @@ public class Account {
 	}
 	
 	//Constructor Overloading (중복 정의)
-	public Account(String custId, String acctId, int balance) {
+	public Account(String custId, String acctId) {
 		setCustId(custId);
 		setAcctId(acctId);
-		this.balance = balance;
 	}
 	
 	
@@ -28,7 +27,7 @@ public class Account {
 	}
 	
 
-	public void SetCustId(String custId) {
+	public void setCustId(String custId) {
 		this.custId = custId;
 	}
 	
@@ -56,5 +55,14 @@ public class Account {
 		}
 		this.balance -= amount;
 	}
+
+	
+	//메서드 재정의 (Overriding)
+	//부모 클래스의 메서드 선언은 반드시 같아야 하고, 구현만 다름
+	@Override
+	public String toString() {
+		return "Account [고객번호 =" + custId + ", 계좌번호 =" + acctId + ", 잔액=" + balance + "]";
+	}
+	
 
 }
