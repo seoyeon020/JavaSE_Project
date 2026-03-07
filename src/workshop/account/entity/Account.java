@@ -18,7 +18,7 @@ public class Account extends Object {
 		setAcctId(acctId);
 	}
 	
-	//setter method ( 멤버변수 값 변경 ) 
+	//setter method ( 멤버변수 값 변경, 값을 변경하는 메서드 ) 
 //	private void setBalance(int balance) {
 //		this.balance = balance;
 //	}
@@ -32,7 +32,7 @@ public class Account extends Object {
 		this.custId = custId;
 	}
 
-	//getter method ( 멤버변수 값 조회 )
+	//getter method ( 멤버변수 값 조회, 값을 읽어오는 메서드 )
 	public String getCustId() {
 		return custId;
 	}
