@@ -2,7 +2,7 @@ package workshop.person.control;
 
 import workshop.person.entity.PersonEntity;
 
-public class PersonManager {
+public class PersonManager { //Person의 정보를 담는 클래스 
 	public static void main(String[] args) {
 		/*
 		 * persons 는 PersonEntity[] 타입

@@ -36,6 +36,7 @@ public class AccountTest {
 			account2.withdraw(10000);
 		}catch(InsufficientBalanceException e) {
 			System.out.println(e.getMessage() + e.getCurrentBalance());
+			//결과: 잔액이 부족합니다. 현재잔액은 5000
 		}
 		
 	}

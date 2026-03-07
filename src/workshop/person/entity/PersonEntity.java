@@ -3,16 +3,16 @@ package workshop.person.entity;
 public class PersonEntity {
 	private String name;
 	private char gender;
-	private String ssn;
+	private String ssn; // 주민번호
 	private String address;
 	private String phone;
 
-	//default constructor
+	//default constructor 기본 생성자
 	public PersonEntity() {
 		
 	}
 
-	//overloaded constructor
+	//overloaded constructor 중복 정의 
 	public PersonEntity(String name, String ssn, String address, String phone) {
 //		this.name = name;
 //		this.ssn = ssn;
@@ -44,12 +44,12 @@ public class PersonEntity {
 		return ssn;
 	}
 
-	public void setSsn(String ssn) {
+	public void setSsn(String ssn) { //주민번호 숫자에 따라 성별 나오게 함 
 		this.ssn = ssn;
 		//0508073347558
-		char genderNum = ssn.charAt(6);
+		char genderNum = ssn.charAt(6); //주민번호 6번째 자리에 따라서 
 		if(genderNum == '1' || genderNum == '3') {
-			//this.gender = '³²';
+			//this.gender = '남';
 			setGender('남');
 		}else {
 			setGender('여');
