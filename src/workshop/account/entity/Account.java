@@ -6,6 +6,7 @@ public class Account extends Object {
 	private String custId;
 	private String acctId;
 	private int balance;
+	//위에 extends Object는 원래 생략되어있음, 부모인 Object의 자식이 Account인 것 
 	
 	//Default Constructor 기본 생성자 
 	public Account() {
@@ -56,7 +57,7 @@ public class Account extends Object {
 	//AccountTest 에서 try/catch 를 하도록 위임하는 것임
 	public void withdraw(int amount) throws InsufficientBalanceException {
 		if(amount > balance) {
-			//Exception을 강제로 발생시킴
+			//Exception을 강제로 발생시킴, throw 클래스 
 			throw new InsufficientBalanceException("잔액이 부족합니다. 현재잔액은 = ", balance);
 		}
 		this.balance -= amount;
