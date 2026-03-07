@@ -18,13 +18,14 @@ public class Account extends Object {
 		setAcctId(acctId);
 	}
 	
-	//setter method ( 멤버변수 값 변경, 값을 변경하는 메서드 ) 
+	//setter method ( 멤버변수 값 변경, 값을 변경하는 메서드 ) -> 밑에 입금 메서드와 겹침 
 //	private void setBalance(int balance) {
 //		this.balance = balance;
 //	}
 	
 	public void setAcctId(String acctId) {
-		this.acctId = acctId;
+		this.acctId = acctId; // 여기서 this의 acctId는 클래스 상단에 선언된 진짜 멤버 변수
+		// 오른쪽 acctId는 파라미터 인자로 들어온 acctId임 
 	}
 
 
@@ -38,7 +39,7 @@ public class Account extends Object {
 	}
 
 	public String getAcctId() {
-		return acctId;
+		return acctId; // 여기 acctId는 클래스 상단에 선언된 멤버 변수를 가리킴 
 	}
 
 	public int getBalance() {
@@ -50,6 +51,7 @@ public class Account extends Object {
 		//this.balance = this.balance + amount;
 		this.balance += amount;
 	}
+	
 	//출금
 	//AccountTest 에서 try/catch 를 하도록 위임하는 것임
 	public void withdraw(int amount) throws InsufficientBalanceException {
