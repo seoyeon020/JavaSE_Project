@@ -20,10 +20,10 @@ public class PersonManager { //Person의 정보를 담는 클래스
 		
 		System.out.println(mgr.findByGender(persons, '여'));
 		
-		mgr.showPerson(persons, "김하늘");
+		mgr.showPerson(persons, "김하늘"); //김하늘 이름인 사람의 정보를 보여주기 
 	}
 
-	public void showPersons(PersonEntity[] persons) {
+	public void showPersons(PersonEntity[] persons) { //person 리스트 보여주기 
 		//Enhanced for Loop
 		for (PersonEntity person : persons) {
 			System.out.println(person.getName() + "\t" + person.getGender() + "\t" + person.getPhone());
@@ -47,8 +47,9 @@ public class PersonManager { //Person의 정보를 담는 클래스
 	
 	
 	public int findByGender(PersonEntity[] persons, char gender) {
+		// 특정 성별의 수가 얼마인지 
 //		for (int i = 0; i < persons.length; i++) {
-//			
+//	
 //		}
 		
 		int genderCnt = 0;
@@ -64,7 +65,7 @@ public class PersonManager { //Person의 정보를 담는 클래스
 	public void showPerson(PersonEntity[] persons, String name) {
 		for (PersonEntity person : persons) {
 			//String은 reference 타입이므로 값을 비교할때 equals() 메서드를 사용해야 함
-			if(person.getName().equals(name)) {
+			if(person.getName().equals(name)) { //인자로 받은 값과 같은 이름인지 
 				System.out.println("[이름] " + person.getName());
 				System.out.println("[성별] " + person.getGender());
 				System.out.println("[전화번호] " + person.getPhone());

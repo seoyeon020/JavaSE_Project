@@ -1,6 +1,6 @@
 package workshop.book.entity;
 
-public class Publication {
+public class Publication { //출판물 나타내는 클래스 
 	private String title;
 	private String publishingDate;
 	private int page;
