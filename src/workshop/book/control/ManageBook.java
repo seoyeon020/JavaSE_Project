@@ -10,7 +10,7 @@ public class ManageBook {
 	public static void main(String[] args) {
 		
 		Magazine pub1 = new Magazine();
-		//Publication method
+		//Publication method, Magazine 클래스는 Publication 클래스를 상속받아서 모든 메소드 호출 가능
 		pub1.getPage();
 		pub1.getPrice();
 		pub1.getPublishingDate();
@@ -19,6 +19,7 @@ public class ManageBook {
 		pub1.getPublishingPeriod();
 		
 		Publication pub = new Magazine();
+		//pub는 타입이 Publication 이므로 그 클래스의 메서드만 호출 가능
 		//Publication method 
 		pub.getPage();
 		pub.getPrice();
@@ -27,7 +28,7 @@ public class ManageBook {
 		
 		// Magazine mag = (Magazine)pub2;
 		((Magazine)pub).getPublishingPeriod();
-		
+		//Publication 클래스 메서드만 호출 가능한 pub를 Magazine의 메서드도 호출 가능하게 형변환 
 		
 		//Publication 타입 배열을 선언 및 생성
 		Publication[] pubs = new Publication[5];
