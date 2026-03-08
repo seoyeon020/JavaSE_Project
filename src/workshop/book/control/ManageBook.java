@@ -18,6 +18,7 @@ public class ManageBook {
 		//Magazine method
 		pub1.getPublishingPeriod();
 		
+		//Polymorphism(다양한+변형)
 		Publication pub = new Magazine();
 		//pub는 타입이 Publication 이므로 그 클래스의 메서드만 호출 가능
 		//Publication method 
